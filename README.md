@@ -1,1 +1,6 @@
 # jelly-blog
+
+### fly
+```
+$ flyctl
+```
