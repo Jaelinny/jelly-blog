@@ -17,15 +17,21 @@ services:
         reservations:
           cpus: '0.05'
           memory: 30M
-
   blog:
-    # build: ../../docker_file/httpd
     image: taengguu/auto-lb:0.1.0
     deploy:
       mode: replicated
-      replicas: 2 # https://docs.docker.com/compose/compose-file/deploy/#replicas
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.05'
+          memory: 50M
+        reservations:
+          cpus: '0.01'
+          memory: 20M
     expose:
       - "80"
     environment:
       - VIRTUAL_HOST=aws.google.com
       - VIRTUAL_PORT=80
+
