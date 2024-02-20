@@ -21,7 +21,7 @@ services:
     image: taengguu/auto-lb:0.1.0
     deploy:
       mode: replicated
-      replicas: 1
+      replicas: 2
       resources:
         limits:
           cpus: '0.05'
