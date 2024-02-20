@@ -1,0 +1,8 @@
+
+19_Feb_2024_16_56_17:
+CONTAINER ID   NAME                   CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O   PIDS
+ed1fd0a088ad   awsgoo-nginx-proxy-1   0.28%     46.36MiB / 50MiB      92.73%    1.19kB / 0B       0B / 0B     30
+a55314a160ae   awsgoo-blog-1          0.00%     9MiB / 50MiB          18.00%    319kB / 131kB     0B / 0B     11
+90d3a77db267   taengguu               0.00%     56.93MiB / 3.757GiB   1.48%     1.78MB / 1.29MB   0B / 0B     11
+
+19_Feb_2024_16_56_19:
