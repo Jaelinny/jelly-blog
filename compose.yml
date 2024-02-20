@@ -9,6 +9,8 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
     depends_on:
       - blog
+      # - blog-a
+      # - blog-b
     deploy:
       resources:
         limits:
@@ -17,11 +19,20 @@ services:
         reservations:
           cpus: '0.05'
           memory: 30M
+
+# blog-a:
+# build: blog-a/
+# blog-b:
+# build: blog-b/
+# - VIRTUAL_HOST=google.aws.com,google.google.com
+# - VIRTUAL_HOST=jelly.google.com
+
+
   blog:
     image: taengguu/auto-lb:0.1.0
     deploy:
       mode: replicated
-      replicas: 1
+      replicas: 2
       resources:
         limits:
           cpus: '0.05'
